@@ -1,17 +1,17 @@
 {
-  "id": 1001,
+  "id": 1101,
   "category": {
     "id": 1,
     "name": "dog"
   },
-  "name": "Snoopy",
+  "name": "Atena",
   "photoUrls": [
     "string"
   ],
   "tags": [
     {
       "id": 0,
-      "name": "string"
+      "name": "vermifugado ok"
     }
   ],
   "status": "available"
