@@ -18,4 +18,8 @@ dependencies {
 
 test{
     useTestNG()
+    filter {
+        excludeTestsMatching "*apiTests*"
+        excludeTestsMatching "*unitTests*"
+    }
 }
