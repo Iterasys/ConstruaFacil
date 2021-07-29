@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/test/java/webTests/seleniumIDE.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/test/java/webTests/seleniumSimples.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/features/comprarCursoCS.feature" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1252" />
   </component>
 </project>
