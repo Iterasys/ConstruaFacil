@@ -11,6 +11,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -98,18 +99,29 @@ public class comprarCursoCS {
     }
 
     @Quando("^clico na imagem de um curso$")
-    public void clicoNaImagemDeUmCurso() {
-        driver.findElement(By.cssSelector("span.mais")).click();
+    public void clicoNaImagemDeUmCurso() throws InterruptedException {
+
+
+        WebElement ele = driver.findElement(By.xpath("/html[1]/body[1]/main[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/a[1]"));
+
+        Actions action = new Actions(driver);
+        action.moveToElement(ele).perform();
+
+        ele.click();
+
+        System.out.println("3 - Clicou no curso");
     }
 
     @Entao("^vejo a pagina com detalhes do curso$")
     public void vejoAPaginaComDetalhesDoCurso() {
         wait.until(ExpectedConditions.titleIs("Mantis - Iterasys"));
         assertEquals(driver.getTitle(),"Mantis - Iterasys");
+        System.out.println("4 - Exibiu a página de detalhes do curso");
     }
 
     @E("^clico no botao Ok do popup da LGPD$")
     public void clicoNoBotaoOkDoPopupDaLGPD() {
         driver.findElement(By.cssSelector("a.cc-btn.cc-dismiss")).click();
+        System.out.println("2 - Clicou no botão ok do popup");
     }
 }
