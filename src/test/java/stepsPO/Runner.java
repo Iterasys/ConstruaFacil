@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
                     "pretty",                           // Formatação visual do Cucumber
                     "html:target/reports/extentreports",        // Saida HTML do Relatório Simples
                     "json:target/reports/extentreports.json",    // Saida Json com os dados
-                    "com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/reports/dashboard.html"
+                    //"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/reports/dashboard.html"
         }
 )
 public class Runner extends AbstractTestNGCucumberTests { // Equivale ao @RunWith do JUnit
