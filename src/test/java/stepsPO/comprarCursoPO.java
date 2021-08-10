@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.Carrinho;
 import pages.Home;
 import pages.Resultado;
 
@@ -23,6 +24,7 @@ public class comprarCursoPO {
 
     Home home;
     Resultado resultado;
+    Carrinho carrinho;
 
     @Before
     public void iniciar(){
@@ -34,6 +36,7 @@ public class comprarCursoPO {
         wait = new WebDriverWait(driver,5,1);
         home = new Home(driver);
         resultado = new Resultado(driver);
+        carrinho = new Carrinho(driver);
 
         System.out.println("Passo 0-Classe");
     }
@@ -77,7 +80,27 @@ public class comprarCursoPO {
     }
 
     @Entao("^confirmo o nome do curso como \"([^\"]*)\" e o preco de \"([^\"]*)\" PO$")
-    public void confirmoONomeDoCursoComoEOPrecoDePO(String arg0, String arg1)  {
+    public void confirmoONomeDoCursoComoEOPrecoDePO(String curso, String preco)  {
+        assertEquals(curso, carrinho.lerNomeCurso());
+        assertEquals(preco, carrinho.lerPrecoCurso());
+
         System.out.println("Passo 6");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

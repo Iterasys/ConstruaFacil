@@ -20,6 +20,7 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-context', version: '5.3.8'
     implementation group: 'com.aventstack', name: 'extentreports', version: '3.0.7'
     implementation group: 'com.vimalselvam', name: 'cucumber-extentsreport', version: '3.1.1'
+    implementation group: 'io.appium', name: 'java-client', version: '7.5.1'
 
 
 }
