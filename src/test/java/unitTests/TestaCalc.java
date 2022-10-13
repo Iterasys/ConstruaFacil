@@ -9,6 +9,7 @@ import static org.testng.Assert.assertEquals;
 public class TestaCalc {
     @Test(priority = 2)
     public void testarSomarDoisNumeros() {
+        // Triplo A - 3A - AAA = CEV
         // 1 - Prepara - Configurar - Given - Arrange
         int num1 = 5;
         int num2 = 7;
@@ -18,10 +19,8 @@ public class TestaCalc {
         int resultadoAtual = Calc.somarDoisNumeros(num1, num2);
 
         // 3 - Validar - Then - Assert
-        System.out.println("O resultado Esperado é " + resultadoEsperado + "\n O resultado Atual foi " + resultadoAtual);
-
+        System.out.println("O resultado atual foi " + resultadoEsperado + "\n O resultado esperado era " + resultadoAtual);
         assertEquals(resultadoAtual, resultadoEsperado);
-
     }
 
     @Test(priority = 1)
